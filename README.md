@@ -1,4 +1,4 @@
-# DSA01-192411215-Assignment1 - Namma Metro Smart-Card Fare System (C++)
+# DSA01-192411215-Assignment1 (C++)
 
 - **Name:** Dhanush Kumar R
 - **Register number:** 192411215

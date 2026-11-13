@@ -37,4 +37,40 @@
 | Q6 | complete_code, correctness_tests, inline_benchmark | |
 | Q7 | redesign_benchmark, REPORT_NOTES.md | |
 
+# DSA01-192411215-Assignment3
+
+**Name:** Dhanush Kumar R  **Register No:** 192411215
+**Course:** C++ OOP - Assignment 3 (CO3): Constructors, Destructors and Operator Overloading
+
+## Compiler
+`g++ --version` -> (paste your version here, e.g. g++ 13)
+
+## Compile command
+```
+g++ -std=c++17 -Wall -Wextra <file>.cpp -o <name>
+```
+Sanitizer builds add `-fsanitize=address -g`; timing builds add `-O0` or `-O2`.
+
+## How to run everything
+```
+bash run_all.sh
+```
+Or one program at a time, e.g. `g++ -std=c++17 -Wall -Wextra Q1/book.cpp -o q1 && ./q1`
+
+## Tasks
+| Folder | Files | Result (fill in after running) |
+|---|---|---|
+| Q1 | book.cpp, no_default_ctor.cpp, reorder_demo.cpp, explicit_demo.cpp, book_default_args.cpp | |
+| Q2 | prescription_shallow.cpp, prescription_deep.cpp, prescription_experiments.cpp, prescription_vector.cpp | |
+| Q3 | auditorium.cpp, auditorium_leak.cpp, logger_predict.cpp, seatmap_alternatives.cpp | |
+| Q4 | money_complete.cpp, money_full.cpp, money_friend_vs_member.cpp | |
+| Q5 | time_playlist.cpp, counter_predict.cpp, timing.cpp | |
+| Q6 | Text.h, text_main.cpp, text_compare.cpp | |
+| Q7 | complex_rlc.cpp | |
+
+Notes: some programs are SUPPOSED to fail (no_default_ctor.cpp, explicit_demo.cpp with -DUSE_EXPLICIT,
+money_friend_vs_member.cpp with -DMEMBER_ONLY, prescription_shallow.cpp under ASan). Screenshot those errors.
+To see every copy in Q6 (a+b+c), also compile with `-fno-elide-constructors`.
+
+
 

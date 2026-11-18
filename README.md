@@ -72,5 +72,27 @@ Notes: some programs are SUPPOSED to fail (no_default_ctor.cpp, explicit_demo.cp
 money_friend_vs_member.cpp with -DMEMBER_ONLY, prescription_shallow.cpp under ASan). Screenshot those errors.
 To see every copy in Q6 (a+b+c), also compile with `-fno-elide-constructors`.
 
+# DSA01-192411215-Assignment4
+**Name:** Dhanush Kumar R  **Register No:** 192411215
+**Course:** Object Oriented Programming with C++ (DSA01) - Assignment 4 (CO4)
+**Compiler:** g++ (version: run `g++ --version` and paste here)
+**Compile command:** `g++ -std=c++17 -Wall -Wextra <file>.cpp -o <name>`
+
+## Run everything
+```bash
+chmod +x run_all.sh && ./run_all.sh      # compiles + runs all tasks, saves *.out.txt
+```
+
+## Tasks
+| Folder | Files | How to run | Result (fill in) |
+|---|---|---|---|
+| Task01 | task1_repaired.cpp, task1_alt_switch.cpp | `g++ -std=c++17 -Wall -Wextra task1_repaired.cpp -o t1 && ./t1` | |
+| Task02 | task2_people.cpp, task2_access_table.cpp, task2_predict.cpp, task2_alt_composition.cpp | `-DVIRT=` removes virtual for task2_predict.cpp | |
+| Task03 | task3_construction.cpp, task3_predict.cpp, task3_complete.cpp, task3_complete_reordered.cpp, task3_experiment.cpp, task3_alt_pointer_member.cpp | experiment: compile with and without `-DVIRT=` | |
+| Task04 | task4_defects.cpp, task4_repaired.cpp, task4_predict.cpp, task4_alt_unique_ptr.cpp | add `-g -fsanitize=address`; use `ASAN_OPTIONS=new_delete_type_mismatch=0` to see the leak report | |
+| Task05 | task5_four_ways.cpp, task5_complete.cpp, task5_complete_byvalue.cpp, task5_alt_vector.cpp | plain compile | |
+| Task06 | vehicles.h, electric_bus.h, main.cpp, task6_alt_switch.cpp | `g++ -std=c++17 -Wall -Wextra main.cpp -o fleet && ./fleet` | |
+
+
 
 

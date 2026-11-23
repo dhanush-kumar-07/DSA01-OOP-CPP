@@ -94,5 +94,38 @@ chmod +x run_all.sh && ./run_all.sh      # compiles + runs all tasks, saves *.ou
 | Task06 | vehicles.h, electric_bus.h, main.cpp, task6_alt_switch.cpp | `g++ -std=c++17 -Wall -Wextra main.cpp -o fleet && ./fleet` | |
 
 
+# Assignment 5 (CO5) - Hospital Billing
+
+Name: ________  Register No.: ________  Compiler: g++ ___ (g++ --version)
+
+Each task folder has ONE file: `main.cpp`. Open the folder, compile, run.
+
+    cd Task_A1
+    g++ -std=c++17 -Wall -Wextra -fsanitize=address -g main.cpp -o task && ./task
+
+| Folder | What the single main.cpp contains |
+|---|---|
+| Task_A1 | Bill hierarchy, day total through Bill*, switch alternative |
+| Task_A2 | Predict-the-output program, early/late binding, dynamic_cast alternative |
+| Task_A3 | Abstract Payer, new corporate payer, std::function alternative |
+| Task_A4 | Exception hierarchy, noexcept, every error thrown/caught, return-code alternative |
+| Task_A5 | Predict-the-output program, catch/log/rethrow/report, manual delete vs RAII |
+| Task_B1 | Complete-the-Code, all bills x all payers, templates, virtual proofs |
+| Task_B2 | Predict, Complete-the-Code, error injection, std::optional alternative |
+| Task_B3 | virtual vs switch vs variant timing; return codes vs exceptions vs optional |
+| Task_B4 | Extension (MaternityBill + CorporatePayer), ASan, rule-file alternative |
+
+## Special builds
+* Task_A2, remove virtual from ~Bill:  `g++ -std=c++17 -fsanitize=address -g -DVDTOR= main.cpp -o t`
+* Task_B1.3 total() not virtual:       `g++ -std=c++17 -fsanitize=address -g -DVT= main.cpp -o t`
+* Task_B1.4 destructor not virtual:    `g++ -std=c++17 -fsanitize=address -g -DVD= main.cpp -o t`  (ASan stops the run: that is the evidence)
+* Task_B3 (timing, NO sanitizer):      `g++ -std=c++17 -O2 -Wall -Wextra main.cpp -o t && ./t`   (`./t 2000000` for a smaller max n)
+
+## Notes
+* MinGW g++ on Windows has no AddressSanitizer: use WSL/Linux, or MSVC `cl /EHsc /std:c++17 /fsanitize=address /Zi main.cpp`.
+* Write predictions (A2, A5, B2) BEFORE running; they are in "PART 1"/"(1)" of those files.
+* Part A diagrams (UML, vtables, exception hierarchy) and pseudocode are not C++; submit them separately.
+
+
 
 
